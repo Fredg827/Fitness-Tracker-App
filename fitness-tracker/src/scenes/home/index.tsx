@@ -1,5 +1,4 @@
 import { SelectedPage } from "@/shared/types";
-import useMediaQuery from "@/hooks/useMediaQuery";
 import HomePageText from "/src/assets/HomePageText.png";
 import HomePageGraphic from "/src/assets/HomePageGraphic.png";
 import SponsorRedBull from "/src/assets/SponsorRedBull.png";
@@ -14,7 +13,7 @@ type Props = {
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  //const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   return (
     <section id="Home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
@@ -59,17 +58,15 @@ const Home = ({ setSelectedPage }: Props) => {
       </div>
 
       {/* Sponsors */}
-      {isAboveMediumScreens && (
+      <div className="md-hidden">
         <div>
           <div>
-            <div>
-              <img alt="redbull-sponsor" src={SponsorRedBull} />
-              <img alt="forbes-sponsor" src={SponsorForbes} />
-              <img alt="fortune-sponsor" src={SponsorFortune} />
-            </div>
+            <img alt="redbull-sponsor" src={SponsorRedBull} />
+            <img alt="forbes-sponsor" src={SponsorForbes} />
+            <img alt="fortune-sponsor" src={SponsorFortune} />
           </div>
         </div>
-      )}
+      </div>
     </section>
   );
 };
