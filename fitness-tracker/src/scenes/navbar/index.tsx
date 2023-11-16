@@ -3,7 +3,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Logo from "@/assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
-import ActionButton from "@/shared/actionButton";
+import ActionButton from "@/shared/ActionButton";
 
 type Props = {
   isTopOfPage: boolean;
@@ -30,7 +30,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
             {/* RIGHT SIDE */}
             <div className={`${flexBetween} w-full gap-16 `}>
-              <div className={`hidden md:flex ${flexBetween} gap-8 text-sm `}>
+              <div
+                className={`hidden md:flex ${flexBetween} gap-8 text-sm whitespace-nowrap`}
+              >
                 <Link
                   page="Home"
                   selectedPage={selectedPage}
@@ -52,7 +54,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                 />
               </div>
-              <div className="hidden md:flex items-centre justify-between gap-8">
+              <div className="hidden md:flex items-centre justify-between gap-8 whitespace-nowrap">
                 <p>Sign In</p>
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Become a Member
