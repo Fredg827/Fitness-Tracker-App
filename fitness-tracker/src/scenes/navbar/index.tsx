@@ -12,7 +12,7 @@ type Props = {
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
-  const flexBetween = "flex items-centre justify-between";
+  const flexBetween = "flex items-center justify-between";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const navbarBackground = isTopOfPage
     ? "bg-transparent"
@@ -54,7 +54,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                 />
               </div>
-              <div className="hidden md:flex items-centre justify-between gap-8 whitespace-nowrap">
+              <div className="hidden md:flex items-center justify-between gap-8 whitespace-nowrap">
                 <p>Sign In</p>
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Become a Member
